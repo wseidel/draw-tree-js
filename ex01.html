@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" type="text/javascript" ></script>
+	<script src="js/jquery.parseSyntaxTree.js" type="text/javascript" ></script>
+	<script src="js/jquery.drawTree.js" type="text/javascript" ></script>
+	<script type="text/javascript">
+	//<![CDATA[
+	$(document).ready(function() {
+
+		$('#drawTree').each(function() {
+  		$(this).drawTree(  $(this).parseSyntaxTree()  );
+		});
+
+	});
+	// ]]>
+	</script>
+	<title>Exemplo.</title>
+  </head>
+  <body>
+  <h3>Exemplo de uso dos plugins: <strong>parserSyntaxTree</strong> e <strong>drawTree</strong>.</h3>
+  <div>
+    <ul>
+      <li>Passo 1: "Um texto a ser parseado."</li>
+      <li>Passo 2: ( o plugin <strong>parserSyntaxTree</strong> transforma o texto do formato abaixo em um objeto do tipo arvore, e o fornece ao <strong>drawTree</strong>.
+        <p id="drawTree">
+        [S [NP [DETERMINER Um] [NOUN texto] ] [PREPOSITION a] [VP [VERB ser] ] [NP [NOUN parseado] ] [PUNCTUATION_MARK .] ]
+        </p>   
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
+
+
+
+
+
